@@ -1,0 +1,25 @@
+.app {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  font-family: arial, sans-serif;
+  margin: 0;
+}
+
+.app__size {
+  margin: auto;
+  font-size: clamp(1.5rem, 0.3448rem + 3vh, 5rem);
+  font-weight: bold;
+}
+
+.app__size p {
+  margin: 0;
+}
+
+.app__size p + p {
+  margin-top: 1em;
+}
+
+.app__size small {
+  font-size: .5em;
+}
