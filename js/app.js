@@ -2,18 +2,10 @@ const app = document.querySelector('.js-app');
 const output = app.querySelector('.js-app-size');
 
 function getScreenHeight() {
-  if (window.matchMedia("(orientation: landscape)").matches) {
-    return window.screen.width;
- }
- 
   return window.screen.height;
 }
 
 function getScreenWidth() {
-  if (window.matchMedia("(orientation: landscape)").matches) {
-    return window.screen.height;
- }
- 
   return window.screen.width;
 }
 
