@@ -53,11 +53,11 @@ function getSizeTemplate(orientation, screenSize, sizes) {
   return `
     <p class="app__size-block app__size-block--screen app__size-block--${orientation.toLowerCase()}">
       <span class="app__size-icon"></span>
-      <span class="app__size-title">Screen (${orientation}):</span>
+      <span class="app__size-title">Screen <span class="sr-only">(${orientation}):</span></span>
       <span class="app__size-value">${screenSize} px</span>
     </p>
     <p class="app__size-block">
-      <span class="app__size-title">Browser:</span>
+      <span class="app__size-title">Browser <span class="sr-only">:</span></span>
       <span class="app__size-value">${sizes.browser.width}x${sizes.browser.height} px</span>
     </p>`;
 }

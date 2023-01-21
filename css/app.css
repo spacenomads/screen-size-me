@@ -1,24 +1,93 @@
+/*
+// ***
+//  Stylesheet App
+//
+//  Table of Contents:
+//    1. Vars
+//    2. Utils
+//    3. Page
+//    4. Size block
+//    5. Footer
+//
+// ***
+*/
+
+
+
+
+
+/*
+// 1. Vars
+// ---
+*/
 :root {
 	--color-white: #f4f5f6;
 	--color-black: #212121;
+	--color-correct-blue: #007aff;
+	--default-font-size: 16;
+	--min-font: calc(32/var(--default-font-size)*1rem);
+	--max-font: calc(128/var(--default-font-size)*1rem);
 }
 
+
+
+
+
+/*
+// 2. Utils
+// ---
+*/
+.sr-only {
+  border: 0;
+  clip: rect(0,0,0,0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+
+
+
+
+/*
+// 3. Page
+// ---
+*/
 .app {
 	background-color: var(--color-white);
 	color: var(--color-black);
 	display: flex;
 	font-family: arial, sans-serif;
+	font-size: calc(16/var(--default-font-size)*1rem);
 	margin: 0;
 	min-height: 100vh;
 	min-height: 100dvh;
+	position: relative;
 }
 
-.app__size {
-	font-size: clamp(1.5rem, .3448rem + 3vh, 5rem);
+.app__main {
+	font-size: clamp(var(--min-font), 1rem + 3vh, var(--max-font));
 	margin: auto;
 	transform: translateY(-10%);
 }
 
+.app__link {
+	color: inherit;
+	text-decoration-color: var(--color-correct-blue);
+}
+
+
+
+
+
+/*
+// 4. Size block
+// ---
+*/
 .app__size-block {
 	margin: 0;
 }
@@ -32,13 +101,12 @@
 }
 
 .app__size-icon {
+	aspect-ratio: 1;
 	bottom: 0;
 	height: 75%;
 	left: 0;
 	position: absolute;
-	transform: translateX(-100%);;
-
-	aspect-ratio: 1;
+	transform: translateX(-100%);
 }
 
 .app__size-icon::before {
@@ -59,13 +127,36 @@
 	transform: translateX(-100%) rotate(90deg);
 }
 
-
 .app__size-title {
 	display: block;
-	font-size: .4em;
+	font-size: .35em;
 	opacity: .75;
+  text-transform: uppercase;
 }
 .app__size-value {
 	display: block;
 	font-weight: bold;
 }
+
+
+
+
+
+/*
+// 5. Footer
+// ---
+*/
+.app__footer {
+	background-color: #e4e5e6;
+	border-radius: 4px 4px 0 0;
+	bottom: 0;
+	font-size: calc(14/var(--default-font-size)*1rem);
+	left: 50%;
+	padding: 0 4rem;
+	position: absolute;
+	text-align: center;
+	transform: translateX(-50%);
+	white-space: nowrap;
+}
+
+
