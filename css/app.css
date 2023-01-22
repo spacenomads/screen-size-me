@@ -7,7 +7,8 @@
 //    2. Utils
 //    3. Page
 //    4. Size block
-//    5. Footer
+//    5. GitHub link
+//    6. Footer
 //
 // ***
 */
@@ -38,15 +39,15 @@
 // ---
 */
 .sr-only {
-  border: 0;
-  clip: rect(0,0,0,0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+	border: 0;
+	clip: rect(0,0,0,0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
 }
 
 
@@ -72,7 +73,6 @@
 .app__main {
 	font-size: clamp(var(--min-font), 1rem + 3vh, var(--max-font));
 	margin: auto;
-	transform: translateY(-10%);
 }
 
 .app__link {
@@ -90,6 +90,7 @@
 */
 .app__size-block {
 	margin: 0;
+	transform: translateY(calc(-16/var(--default-font-size)*1rem));
 }
 
 .app__size-block + .app__size-block {
@@ -113,7 +114,6 @@
 	border: 2px solid var(--color-black);
 	border-radius: 2px;
 	content: '';
-	content: '';
 	height: 70%;
 	left: 50%;
 	position: absolute;
@@ -129,10 +129,11 @@
 
 .app__size-title {
 	display: block;
-	font-size: .35em;
+	font-size: .3em;
 	opacity: .75;
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
+
 .app__size-value {
 	display: block;
 	font-weight: bold;
@@ -143,7 +144,42 @@
 
 
 /*
-// 5. Footer
+// 5. GitHub Link
+// ---
+*/
+.app__code {
+	font-size: calc(14/var(--default-font-size)*1rem);
+	margin: 0;
+	position: absolute;
+	right: 1em;
+	top: 1em;
+}
+
+.app__code .app__link {
+	text-decoration: none;
+}
+
+.app__code .app__link:hover {
+	text-decoration: var(--color-correct-blue) underline;
+}
+
+.app__github {
+	background: url(../assets/img/github.svg) left top no-repeat;
+	display: inline-block;
+	height: calc(1/var(--default-font-size)*1rem);
+	margin-left: .2em;
+	overflow: hidden;
+	padding-top: calc(23/var(--default-font-size)*1rem);
+	vertical-align: -3px;
+	width: calc(24/var(--default-font-size)*1rem);
+}
+
+
+
+
+
+/*
+// 6. Footer
 // ---
 */
 .app__footer {
@@ -158,5 +194,3 @@
 	transform: translateX(-50%);
 	white-space: nowrap;
 }
-
-
